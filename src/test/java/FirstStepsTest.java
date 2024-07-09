@@ -50,8 +50,8 @@ class FirstStepsTest {
     }
 
 
-/*
-    @Test
+
+    @org.junit.jupiter.api.Test
     public void testIsInsideRect() {
         FirstSteps firstSteps = new FirstSteps();
         assertTrue(firstSteps.isInsideRect(0, 0, 100, 100, 50, 50));
@@ -64,17 +64,20 @@ class FirstStepsTest {
         assertFalse(firstSteps.isInsideRect(0, 0, 100, 100, -1, 0));
         assertFalse(firstSteps.isInsideRect(0, 0, 100, 100, 0, -1));
     }
-
-    @Test
+    @org.junit.jupiter.api.Test
     public void testSumArray() {
         FirstSteps firstSteps = new FirstSteps();
         int[] array1 = {1, 2, 3};
         assertEquals(6, firstSteps.sum(array1));
-        int[] array2 = {-1, -2, 3};
+        int[] array2 = {-1, -1, 2};
         assertEquals(0, firstSteps.sum(array2));
-        int[] array3 = {};
+        int[] array3 = {-1, -2, 3};
         assertEquals(0, firstSteps.sum(array3));
+        int[] array4 = {};
+        assertEquals(0, firstSteps.sum(array4));
     }
+/*
+
 
     @Test
     public void testMulArray() {
