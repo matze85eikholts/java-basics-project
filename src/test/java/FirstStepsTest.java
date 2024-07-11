@@ -49,8 +49,6 @@ class FirstStepsTest {
         assertFalse(firstSteps.isGreater(1, 2));
     }
 
-
-
     @org.junit.jupiter.api.Test
     public void testIsInsideRect() {
         FirstSteps firstSteps = new FirstSteps();
@@ -76,10 +74,9 @@ class FirstStepsTest {
         int[] array4 = {};
         assertEquals(0, firstSteps.sum(array4));
     }
-/*
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testMulArray() {
         FirstSteps firstSteps = new FirstSteps();
         int[] array1 = {1, 2, 3};
@@ -91,7 +88,7 @@ class FirstStepsTest {
         int[] array4 = {};
         assertEquals(0, firstSteps.mul(array4));
     }
-
+/*
     @Test
     public void testMinArray() {
         FirstSteps firstSteps = new FirstSteps();

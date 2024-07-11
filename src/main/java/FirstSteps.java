@@ -36,4 +36,11 @@ public class FirstSteps {
         }
         return answer;
     }
+    public int mul(int[] a) {
+        int answer = 1;
+        for (var i : a) {
+            answer *= i;
+        }
+        return answer;
+    }
 }
