@@ -30,4 +30,7 @@ public class Rectangle {
     public Point2D getTopLeft () {
         return leftTop;
     }
+    public Point2D getBottomRight() {
+        return rightBottom;
+    }
 }
