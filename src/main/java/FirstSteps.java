@@ -38,9 +38,12 @@ public class FirstSteps {
     }
     public int mul(int[] a) {
         int answer = 1;
-        
-        for (var i : a) {
-            answer *= i;
+        if (a.length == 0 ) {
+            return 0;
+        } else {
+            for (var i : a) {
+                answer *= i;
+            }
         }
         return answer;
     }

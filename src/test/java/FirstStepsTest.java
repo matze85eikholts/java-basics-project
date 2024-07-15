@@ -89,7 +89,7 @@ class FirstStepsTest {
         assertEquals(0, firstSteps.mul(array4));
     }
 /*
-    @Test
+    @org.junit.jupiter.api.Test
     public void testMinArray() {
         FirstSteps firstSteps = new FirstSteps();
         int[] array1 = {5, 1, 2, 3, -2};
@@ -98,7 +98,7 @@ class FirstStepsTest {
         assertEquals(Integer.MAX_VALUE, firstSteps.min(array2));
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testMaxArray() {
         FirstSteps firstSteps = new FirstSteps();
         int[] array1 = {5, 1, 22, 3, -2};
