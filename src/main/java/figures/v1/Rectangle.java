@@ -33,4 +33,52 @@ public class Rectangle {
     public Point2D getBottomRight() {
         return rightBottom;
     }
+    public int getLength() {
+        return rightBottom.getX() - leftTop.getX();
+    }
+
+    public int getWidth() {
+        return rightBottom.getY() - leftTop.getY();
+    }
+
+    public void moveRel(int dx, int dy) {
+        leftTop.moveRel(dx, dy);
+        rightBottom.moveRel(dx, dy);
+    }
+
+    public void enlarge(int nx, int ny) {
+        rightBottom.setX(leftTop.getX() + getLength() * nx);
+        rightBottom.setY(leftTop.getY() + getWidth() * ny);
+    }
+
+    public double getArea() {
+        return getLength() * getWidth();
+    }
+
+    public double getPerimeter() {
+        return getLength() * 2 + getWidth() * 2;
+    }
+    public boolean isInside(int x, int y) {
+        return x >= leftTop.getX() && x <= rightBottom.getX() &&
+                y >= leftTop.getY() && y <= rightBottom.getY();
+    }
+
+    public boolean isInside(Point2D point) {
+        return isInside(point.getX(), point.getY());
+    }
+
+    public boolean isIntersects(Rectangle rectangle) {
+        return !(this.getTopLeft().getX() > rectangle.getBottomRight().getX() ||
+                this.getBottomRight().getX() < rectangle.getTopLeft().getX() ||
+                this.getTopLeft().getY() > rectangle.getBottomRight().getY() ||
+                this.getBottomRight().getY() < rectangle.getTopLeft().getY());
+    }
+
+    public boolean isInside(Rectangle rectangle) {
+        return isInside(rectangle.getTopLeft()) && isInside(rectangle.getBottomRight()) &&
+                isInside(rectangle.getTopLeft().getX(), rectangle.getBottomRight().getY()) &&
+                isInside(rectangle.getBottomRight().getX(), rectangle.getTopLeft().getY());
+    }
+
+
 }
