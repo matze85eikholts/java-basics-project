@@ -3,5 +3,6 @@ public class Program {
         Numbers nums = new Numbers();
         int result  = nums.sumAll(5);
         System.out.println(result);
+        nums.printChars();
     }
 }
