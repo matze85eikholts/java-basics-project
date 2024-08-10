@@ -1,4 +1,4 @@
-package net.thumbtack.school.base;
+package base;
 
 import org.junit.Test;
 
